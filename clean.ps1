@@ -5,7 +5,7 @@
 # Admin elevation check
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "Restarting script with Administrator privileges..." -ForegroundColor Yellow
-    Start-Process powershell "-ExecutionPolicy Bypass -Command `"irm https://raw.githubusercontent.com/vik-khatkar/winclean/refs/heads/main/clean.ps1 | iex`"" -Verb RunAs
+    Start-Process powershell "-ExecutionPolicy Bypass -Command `"irm https://raw.githubusercontent.com/vik-khatkar/winclean/main/clean.ps1 | iex`"" -Verb RunAs
     exit
 }
 
