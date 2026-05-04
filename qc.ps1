@@ -269,8 +269,8 @@ function Show-TestMenu {
                 $null = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
             }
             '8' {
-                irm qc.imvsk.ca/menu.ps1 | iex
-#	        Start-Process powershell -ArgumentList "-NoLogo -NoProfile -ExecutionPolicy Bypass -Command `"irm qc.imvsk.ca/menu.ps1 | iex`""
+                irm https://raw.githubusercontent.com/vik-khatkar/winclean/main/menu.ps1 | iex
+#	        Start-Process powershell -ArgumentList "-NoLogo -NoProfile -ExecutionPolicy Bypass -Command `"irm https://raw.githubusercontent.com/vik-khatkar/winclean/main/menu.ps1 | iex`""
                 Write-Host (Center-Text "Press any key to return to menu...") -ForegroundColor Gray
                 $null = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
             }
